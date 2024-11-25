@@ -1,6 +1,6 @@
 ﻿using Decorator;
 
-INotifier notifier = new Decorator.EmailNotify("admin@example.com");
-notifier = new Decorator.SMSDecorator(notifier, "+1234567890");
-notifier = new Decorator.FacebookDecorator(notifier, "admin_facebook");
+INotifier notifier = new EmailNotify("admin@example.com");
+notifier = new SMSDecorator(notifier, "+1234567890");
+notifier = new FacebookDecorator(notifier, "facebookLogin");
 notifier.Send("Сервер упал!");
